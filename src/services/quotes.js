@@ -17,7 +17,7 @@ module.exports = (path, apiRequest) => {
         path,
         params: { limit, page, offset },
       });
-      if (result.status !== 200) throw Error(result.data);
+      if (result.status !== 200) throw result.data;
       const quotes = result.data?.docs;
       if (quotes && Array.isArray(quotes))
         return quotes.map((quote) => Quote.fromObject(quote));
@@ -33,7 +33,7 @@ module.exports = (path, apiRequest) => {
     */
     async getById(id) {
       const result = await apiRequest.get({ path: `${path}/${id}` });
-      if (result.status !== 200) throw Error(result.data);
+      if (result.status !== 200) throw result.data;
       const quote = result.data?.docs[0];
       if (!quote) return null;
       return Quote.fromObject(quote);

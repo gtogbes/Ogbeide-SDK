@@ -17,7 +17,7 @@ module.exports = (path, apiRequest) => {
         path,
         params: { limit, page, offset },
       });
-      if (result.status !== 200) throw Error(result.data);
+      if (result.status !== 200) throw result.data;
       const movies = result.data?.docs;
       if (movies && Array.isArray(movies))
         return movies.map((movie) => Movie.fromObject(movie));
@@ -33,7 +33,7 @@ module.exports = (path, apiRequest) => {
     */
     async getById(id) {
       const result = await apiRequest.get({ path: `${path}/${id}` });
-      if (result.status !== 200) throw Error(result.data);
+      if (result.status !== 200) throw result.data;
       const movie = result.data?.docs[0];
       if (!movie) return null;
       return Movie.fromObject(movie);
@@ -49,7 +49,7 @@ module.exports = (path, apiRequest) => {
 
     async getMovieQuotes(id) {
       const result = await apiRequest.get({ path: `${path}/${id}/quote` });
-      if (result.status !== 200) throw Error(result.data);
+      if (result.status !== 200) throw result.data;
       const quotes = result.data?.docs;
       if (quotes && Array.isArray(quotes)) {
         return quotes.map((quote) => Quote.fromObject(quote));

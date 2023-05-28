@@ -26,7 +26,7 @@ const makeApiRequest = async ({ path, method, params, body, headers }) => {
     });
     return response;
   } catch (error) {
-    handleError(error);
+    return handleError(error);
   }
 };
 
