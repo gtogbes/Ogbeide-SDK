@@ -23,12 +23,12 @@ The `quotes` module provides the following functions:
 
 To use the SDK, you can follow these steps:
 
-1. Install the SDK by running `npm install lord-of-the-rings-sdk`.
+1. Install the SDK by running `npm install ogbeide-lord-of-the-rings-sdk`.
 
 2. Import the SDK into your project:
 
    ```js
-   const LordOfTheRingsSDK = require("lord-of-the-rings-sdk");
+   const LordOfTheRingsSDK = require("ogbeide-lord-of-the-rings-sdk");
    ```
 
 3. Create an instance of the SDK by providing the API key:

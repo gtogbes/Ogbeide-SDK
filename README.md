@@ -7,7 +7,7 @@ This SDK provides a convenient way to interact with the Lord of the Rings API an
 To use the SDK, you can install it via npm:
 
 ``` bash
-npm install lord-of-the-rings-sdk
+npm install ogbeide-lord-of-the-rings-sdk
 
 ```
 
