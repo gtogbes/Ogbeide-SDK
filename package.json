@@ -1,6 +1,6 @@
 {
   "name": "ogbeide-lord-of-the-rings-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "lord of the rings sdk",
   "main": "src/index.js",
   "author": "gtobes",
